@@ -1,18 +1,25 @@
-import { Title,Tag,Date,Id,TagContainer,Division,Description } from "./NavBar.Styled"
+import { Title,Tag,Date,Id,TagContainer,Division,
+       DateTitle,DateId,TopicContent } from "./NavBar.Styled"
+
 function Content(props)
 {
-    return(
+   return(
        <Division>
-          <Title> {props.Heading}</Title >   
-          <Id > {props.Id}</Id>    
-          <Date >{props.Date}</Date>
-          <Description>{props.Describe}</Description>
+          <DateTitle>
+             <DateId>
+                <Date >{props.Date}</Date>
+                <Id > {props.Id}</Id>    
+             </DateId>
+             <TopicContent>
+                <Title> {props.Heading}</Title >   
+                <div>{props.Describe}</div>
+             </TopicContent>
+          </DateTitle>
           <TagContainer>   
-          <Tag >{props.Tag1}</Tag> 
-          <Tag >{props.Tag2}</Tag> 
+             <Tag >{props.Tag1}</Tag> 
+             <Tag >{props.Tag2}</Tag> 
           </TagContainer> 
         </Division>
-
-    );
+      );
 }
 export default Content;

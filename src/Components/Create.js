@@ -2,21 +2,20 @@ import { InputField,Form,Button,Mandatory,Error,FormTitle } from "./NavBar.Style
 import {  useState,useRef,useEffect } from "react";
 
 function Create(){
-    
     var name = useRef();
     var date = useRef();
     var title = useRef();
     var description = useRef();
     var [formErrors , setFormErrors] = useState({}); 
     
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => 
+  {
      e.preventDefault();   
      setFormErrors(Validate(name.current.value,
                            date.current.value,
                            title.current.value,
                            description.current.value));
   }
-
 
   const Validate =(name,date,title,description) => 
   {
@@ -40,24 +39,24 @@ function Create(){
      return errors;
 }
 
-const handleClick = () => {
+const handleClick = () => 
+{
     name = "";
     date ="";
     title= "";
     description = "";
-    
     setFormErrors({});
-  };
+};
 
-useEffect(() => {
+useEffect(() => 
+{
     localStorage.setItem('Username', name.current.value);
     localStorage.setItem('Date', date.current.value);
     localStorage.setItem('Title', title.current.value);
     localStorage.setItem('Description', description.current.value);
   },
-  );
+);
 
-    
 return(
     <div>
       <Form onSubmit={handleSubmit}>

@@ -1,5 +1,6 @@
 import Content from "./Content"
 import ReadMore from "./ReadMore"
+import { WholeBlog } from "./NavBar.Styled"
 function Profile(){
     const article = [
         {
@@ -7,8 +8,16 @@ function Profile(){
             id : "@samurai2099",
             date : "27 May",
             describe : <ReadMore>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit  esse cillum dolore eu fugiat nulla pariatur. Excepteur   sint occaecat cupidatat non proident, sunt in culpa qui  officia deserunt mollit anim id est laborum.
-                       </ReadMore>,
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                         ut labore et dolore magna aliqua. Dignissim enim sit amet venenatis urna cursus eget nunc 
+                         scelerisque. Semper viverra nam libero justo. Ac ut consequat semper viverra nam libero justo 
+                         laoreet sit. Feugiat nibh sed pulvinar proin gravida. Cras tincidunt lobortis feugiat vivamus.
+                         Ut consequat semper viverra nam libero. Senectus et netus et malesuada. Mauris ultrices eros in 
+                         cursus turpis. Ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet. 
+                         Aliquet nibh praesent tristique magna sit amet purus. Orci dapibus ultrices in iaculis nunc. 
+                         At in tellus integer feugiat scelerisque varius. Volutpat consequat mauris nunc congue nisi vitae 
+                         suscipit tellus mauris.
+                        </ReadMore>,
             tag1 : "#meditation",
             tag2 : "#mentalpeace"
         },
@@ -17,14 +26,24 @@ function Profile(){
             id : "@capitalism",
             date : "24 May",
             describe : <ReadMore>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit  esse cillum dolore eu fugiat nulla pariatur. Excepteur   sint occaecat cupidatat non proident, sunt in culpa qui  officia deserunt mollit anim id est laborum.
-                       </ReadMore>,
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                         ut labore et dolore magna aliqua. Dignissim enim sit amet venenatis urna cursus eget nunc 
+                         scelerisque. Semper viverra nam libero justo. Ac ut consequat semper viverra nam libero justo 
+                         laoreet sit. Feugiat nibh sed pulvinar proin gravida. Cras tincidunt lobortis feugiat vivamus.
+                         Ut consequat semper viverra nam libero. Senectus et netus et malesuada. Mauris ultrices eros in 
+                         cursus turpis. Ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet. 
+                         Aliquet nibh praesent tristique magna sit amet purus. Orci dapibus ultrices in iaculis nunc. 
+                         At in tellus integer feugiat scelerisque varius. Volutpat consequat mauris nunc congue nisi vitae 
+                         suscipit tellus mauris.
+                        </ReadMore>,
             tag1 : "#anarchy",
             tag2 : "#silence"
         }
     ];
     return(
-        
+    
+        <WholeBlog>
+            {
             article.map((feedback) => {
             return(
              <Content   
@@ -36,6 +55,8 @@ function Profile(){
               Tag2 = {feedback.tag2} />
             );
         })
+    }
+        </WholeBlog>
     
     );
     

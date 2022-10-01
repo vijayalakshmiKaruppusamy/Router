@@ -1,4 +1,5 @@
-function Trending(){
+function Trending()
+{
     return(
         <div></div>
     );
