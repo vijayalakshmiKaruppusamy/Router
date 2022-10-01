@@ -5,6 +5,7 @@ export const MainContainer = styled.div`
 display:flex;`
 
 export const List = styled.ul`
+position:fixed;
 box-sizing:border-box;
 margin:0;
 padding :0;
@@ -33,7 +34,7 @@ font-size: 16px;
 left: 26px;
 top: 245px;
 text-decoration: none;
-color:black;`
+color: #101010;`
 
 export const TrendingLink = styled(SearchLink)`
 top:325px;`
@@ -49,8 +50,14 @@ export const WholeBlog = styled.div`
 display:flex;
 flex-direction:column;`
 
+export const Latest = styled.div`
+margin:2rem 0 0 10rem;`
+
+export const Latesttext = styled.div`
+margin:0;`
+
 export const Division = styled.div`
-margin:5rem 0 0 4rem`
+margin:3rem 0 0 10rem`
 
 export const DateTitle = styled.div`
 display:flex;

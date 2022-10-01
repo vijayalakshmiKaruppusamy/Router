@@ -4,6 +4,8 @@ import { Title,Tag,Date,Id,TagContainer,Division,
 function Content(props)
 {
    return(
+
+        
        <Division>
           <DateTitle>
              <DateId>
@@ -20,6 +22,7 @@ function Content(props)
              <Tag >{props.Tag2}</Tag> 
           </TagContainer> 
         </Division>
+        
       );
 }
 export default Content;
