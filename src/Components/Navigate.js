@@ -11,7 +11,7 @@ function Navigate(){
         <List>
           <div>
             <ProfileIcon src={ profile } alt="Profile" />
-         </div>
+          </div>
           <div>
             <SearchingIcon src={ search } alt="Search" />
             <SearchLink to="/search">search</SearchLink>

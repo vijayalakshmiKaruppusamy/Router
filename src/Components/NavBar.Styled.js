@@ -104,7 +104,7 @@ export const Form = styled.form`
  display:flex;
  flex-direction:column;
  row-gap:1rem;
- margin : 8rem 0 0 15rem;
+ margin : 4rem 0 0 15rem;
  border: 2px solid grey;
  background-color:whitesmoke`
 
