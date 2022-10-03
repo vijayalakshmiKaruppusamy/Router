@@ -2,14 +2,13 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Profile from './Components/Profile'
 import Search from "./Components/Search"
 import Trending from "./Components/Trending"
-import Create from "./Components/Create"
-import ReadMore from "./Components/ReadMore"
+import Create from "./Components/Form/Create"
 import Navigate from "./Components/Navigate"
-import { MainContainer } from "./Components/NavBar.Styled"
+import ReadMore from "./Components/ReadMore"
+import { MainContainer } from "./StyledComponents/NavBar.Styled"
  
 function App() {
   return (
-     <Router>
       <MainContainer>
          <Navigate />
          <Routes>
@@ -20,7 +19,6 @@ function App() {
           <Route path="/readmore" element={<ReadMore />} />
           </Routes>
        </MainContainer>
-      </Router>
   );
 }
 export default App;

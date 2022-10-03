@@ -1,4 +1,4 @@
-import { InputField,Form,Button,Mandatory,Error,FormTitle } from "./NavBar.Styled"
+import { InputField,Form,Button,Mandatory,Error,FormTitle } from "../../StyledComponents/CreateStyled"
 import {  useState,useRef,useEffect } from "react";
 
 function Create(){
@@ -37,12 +37,12 @@ function Create(){
     
       if(!title)
         errors.title = "Please enter the title";
-      else if(title.length < 5)
+      else if(title.length < 10)
         errors.title = "Enter Proper title";
   
       if(!description)
         errors.description = "Please enter the content";
-      else if(description.length < 10)
+      else if(description.length < 20)
         errors.description = "Enter Proper description";
       
       if(!fTag)

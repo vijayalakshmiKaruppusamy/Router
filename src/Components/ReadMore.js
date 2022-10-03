@@ -1,19 +1,33 @@
-import { useState } from "react"
-import { ReadMoreLink } from "./NavBar.Styled"
+import { useLocation } from "react-router-dom"
+import { article } from "../Components/Article"
+import { Title, Tag, Date, Id, TagContainer, Division, Describe, DateId } from "../StyledComponents/Readmorestyled"
 
-
-function ReadMore({children}){
-    const [readMore,setReadMore] = useState(false);
-
-    const Expand = () => 
-    {
-        setReadMore(prevState => !prevState)
-    }
-    return(
-         <div>
-             {readMore ? children : children.substr(0,500)}
-             <ReadMoreLink  onClick={Expand}>{readMore ? '' : '...read more'} </ReadMoreLink>
-         </div>
-    );
+export default function ReadMore() {
+  const { state } = useLocation();
+  return (
+    <>
+      {article.map((feedback) => {
+        return (
+          <>
+            {state.id === feedback.id && (
+              <>
+                <Division>
+                  <Title> {feedback.heading}</Title >
+                  <DateId>
+                    <Id >Written by {feedback.id}</Id>
+                    <Date >on {feedback.date}</Date>
+                  </DateId>
+                  <Describe>{feedback.describe}</Describe>
+                  <TagContainer>
+                    <Tag >{feedback.tag1}</Tag>
+                    <Tag >{feedback.tag2}</Tag>
+                  </TagContainer>
+                </Division>
+              </>
+            )}
+          </>
+        );
+      })}
+    </>
+  )
 }
-export default ReadMore;

@@ -3,7 +3,7 @@ import search from "../Assets/search.svg"
 import trending from "../Assets/trending_up.svg"
 import addCircle from "../Assets/add_circle.svg"
 import { List,ProfileIcon,SearchingIcon,TrendingIcon,
-       CreateIcon,SearchLink,TrendingLink,CreateLink  } from "./NavBar.Styled"
+       CreateIcon,SearchLink,TrendingLink,CreateLink  } from "../StyledComponents/NavBar.Styled"
 
 function Navigate(){
     return(
